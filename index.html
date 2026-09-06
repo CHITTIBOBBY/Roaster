@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Roaster — Minimal Scheduler</title>
+    <link rel="stylesheet" href="/src/styles.css">
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Roaster — Minimal Scheduler</h1>
+        <p class="muted">Plain HTML + JS version (no React). Add people, set leave, generate equitable schedule.</p>
+      </header>
+
+      <main>
+        <section class="panel">
+          <h2>People</h2>
+          <div id="people-list"></div>
+          <button id="add-person">Add person</button>
+        </section>
+
+        <section class="panel">
+          <h2>Controls</h2>
+          <label>Start: <input type="date" id="start-date" /></label>
+          <label>End: <input type="date" id="end-date" /></label>
+          <div class="controls-row">
+            <button id="generate">Generate Schedule</button>
+            <a id="download-csv" class="btn" download="schedule.csv">Download CSV</a>
+          </div>
+        </section>
+
+        <section class="panel full">
+          <h2>Schedule</h2>
+          <div id="schedule-container">No schedule generated yet.</div>
+        </section>
+      </main>
+
+      <footer>
+        <small>Roaster — simple equitable shift scheduler — plain JS edition</small>
+      </footer>
+    </div>
+
+    <script type="module" src="/src/app.js"></script>
+  </body>
+</html>
